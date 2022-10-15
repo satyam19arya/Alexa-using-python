@@ -10,7 +10,7 @@ import pyjokes
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 # print(voices[1].id)
-engine.setProperty('voice', voices[0].id)
+engine.setProperty('voice', voices[1].id)
 
 def speak(audio):
     engine.say(audio)
@@ -68,7 +68,7 @@ if __name__ == "__main__":
             webbrowser.open('youtube.com')
 
         elif 'open google' in query:
-            webbrowser.open('google.com')
+            webbrowser.net('google.com')
 
         elif 'open stackoverflow' in query:
             webbrowser.open('stackoverflow.com')
@@ -102,6 +102,10 @@ if __name__ == "__main__":
 
         elif 'joke' in query:
             speak(pyjokes.get_joke())
+
+        elif 'love' in query:
+            print("I love u")
+            speak("I love you too")
 
         elif 'bye bye' in query:
             print("Thank you sir! Have a great day")
